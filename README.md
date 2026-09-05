@@ -1,29 +1,33 @@
 # Polk County Cycling Club
 
-Public website for [Polk County Cycling Club (PoCo)](https://github.com/KyndleK/polk-county-cycling-club) in Bolivar, MO — events, trails, about, and contact.
+Public website for Polk County Cycling Club (PoCo) in Bolivar, MO — events, trails, about, and contact.
 
 ## Hosting
 
-- **Domain:** Cloudflare Registrar + DNS
-- **Host:** [Cloudflare Pages](https://developers.cloudflare.com/pages/) (GitHub deploys from `main`)
+- **Domain:** `polkcountycycling.org` (Cloudflare Registrar + DNS)
+- **Host:** Cloudflare Workers (static assets) with GitHub builds from `main`
 - **Stack:** Static brochure site (placeholder HTML for now; Prototyper/Designer will replace this)
+
+## Config
+
+`wrangler.jsonc` names the Worker `polk-county-cycling-club` — that name must match the project in the Cloudflare dashboard when using Git builds.
 
 ## Local preview
 
-Open `index.html` in a browser, or serve the repo root:
+Open `index.html` in a browser, or:
 
 ```bash
 npx --yes serve .
 ```
 
-## Cloudflare Pages setup
+## Cloudflare setup (Git)
 
-1. Workers & Pages → Create → Connect GitHub → this repo
-2. Production branch: `main`
-3. Build command: *(leave empty for plain HTML)*
-4. Build output directory: `/` (or leave as root)
-5. After first deploy works on `*.pages.dev`, attach the custom domain under **Custom domains**
+1. [Workers & Pages](https://dash.cloudflare.com/?to=/:account/workers-and-pages) → **Create** → **Import a repository**
+2. Connect GitHub → select `KyndleK/polk-county-cycling-club`
+3. Confirm project name `polk-county-cycling-club`, production branch `main`
+4. No build command for plain HTML; deploy root assets
+5. After `*.workers.dev` (or Pages URL) looks good → **Custom domains** → `polkcountycycling.org` (+ optional `www`)
 
 ## Maintain
 
-Push to `main` → production. Branches/PRs get preview URLs automatically.
+Push to `main` → production. Branches/PRs get preview URLs.
