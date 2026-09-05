@@ -469,7 +469,7 @@ a:hover {
 .hero-photo-content {
   position: relative;
   z-index: 1;
-  padding: 5.5rem 0.75rem 3.75rem; /* slight extra inline breath; .container owns gutters */
+  padding: 5.5rem 0 3.75rem; /* no extra inline — .container 2rem gutter matches nav logo */
   max-width: none; /* don't shrink+center — left edge must match nav logo gutter */
   margin-inline: auto; /* same as nav .container */
 }
