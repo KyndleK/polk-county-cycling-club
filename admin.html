@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Club admin — PoCo Cycling</title>
+  <meta name="description" content="Prototype admin for PoCo Cycling route submissions.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/poco-logo.png" type="image/png">
+</head>
+<body class="page-admin">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="PoCo Cycling home">
+        <img class="brand-mark" src="assets/poco-logo-transparent.png" alt="PoCo Cycling">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="routes.html">Routes</a></li>
+          <li><a href="country-miler.html">Country Miler</a></li>
+          <li><a class="nav-cta" href="contact.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Prototype</p>
+        <h1>Club admin</h1>
+        <p class="lede">Review pending route submissions. Password-gated for this static demo only — not real security.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div id="admin-gate" class="admin-gate">
+          <h2 class="form-section-title">Sign in</h2>
+          <p class="form-lede">Prototype password is documented in the README.</p>
+          <p id="admin-login-error" class="form-error" hidden>Incorrect password. Try again.</p>
+          <form class="form" id="admin-login-form" action="#" method="post">
+            <label>
+              Password
+              <input type="password" name="password" required autocomplete="current-password" placeholder="Club admin password">
+            </label>
+            <button class="btn" type="submit">Enter</button>
+          </form>
+        </div>
+
+        <div id="admin-panel" hidden>
+          <div class="section-head">
+            <div>
+              <h2>Pending submissions</h2>
+              <p>Approve to publish on Routes · Reject removes from the queue.</p>
+            </div>
+            <button type="button" class="btn btn-outline" id="admin-logout">Log out</button>
+          </div>
+          <p id="admin-pending-empty" class="meta" hidden>No pending routes. New submissions from the Routes page will show up here (same browser).</p>
+          <div id="admin-pending-list" class="admin-list" aria-live="polite"></div>
+          <div class="note-box">
+            <strong>Prototype limits:</strong> data lives in <code>localStorage</code> on this device/browser only. Approve/reject will not sync across computers. Production needs a shared database and real auth.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-mark" src="assets/poco-logo-white.png" alt="">
+          <p>Polk County Cycling Club · Bolivar, MO<br>President: Kyndle Katzer</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="routes.html">Routes</a></li>
+            <li><a href="country-miler.html">Country Miler</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="contact.html">Join / Contact</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61550557324819" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+            <li><a class="footer-admin" href="admin.html">Club admin</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PoCo Cycling · Polk County Cycling Club</span>
+        <span>Bolivar, Missouri</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/routes-store.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,84 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Polk County Cycling Club</title>
-  <meta name="description" content="Polk County Cycling Club (PoCo) — community cycling in Bolivar, MO and the Frisco Highline Trail." />
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #0f172a;
-      --fg: #e2e8f0;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --wip-bg: #854d0e;
-      --wip-fg: #fef9c3;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      background: radial-gradient(circle at top, #1e293b, var(--bg));
-      color: var(--fg);
-      padding: 4.5rem 2rem 2rem;
-    }
-    .wip-banner {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: var(--wip-bg);
-      color: var(--wip-fg);
-      text-align: center;
-      padding: 0.65rem 1rem;
-      font-size: 0.9rem;
-      line-height: 1.35;
-      box-shadow: 0 1px 0 rgba(0,0,0,0.2);
-    }
-    .wip-banner strong { font-weight: 650; }
-    main {
-      max-width: 36rem;
-      text-align: center;
-    }
-    h1 {
-      font-size: clamp(1.75rem, 4vw, 2.25rem);
-      margin: 0 0 0.75rem;
-      letter-spacing: -0.02em;
-    }
-    p {
-      margin: 0 0 1rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-    .badge {
-      display: inline-block;
-      margin-bottom: 1.25rem;
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      border: 1px solid #334155;
-      color: var(--accent);
-      font-size: 0.85rem;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PoCo Cycling — Polk County Cycling Club</title>
+  <meta name="description" content="Polk County Cycling Club in Bolivar, MO. Rides, Frisco Highline Trail, and The Country Miler gran fondo.">
+  <link rel="stylesheet" href="css/styles.css?v=logo4">
+  <link rel="icon" href="assets/poco-logo.png" type="image/png">
 </head>
-<body>
-  <!-- Remove .wip-banner when the site goes live -->
-  <div class="wip-banner" role="status">
-    <strong>Site under construction</strong> — Polk County Cycling Club. Content and design are still being built.
-  </div>
+<body class="page-home">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="PoCo Cycling home">
+        <img class="brand-mark" id="home-brand-mark" src="assets/poco-logo-white.png" alt="PoCo Cycling">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="routes.html">Routes</a></li>
+          <li><a href="country-miler.html">Country Miler</a></li>
+          <li><a class="nav-cta" href="contact.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <div class="badge">Coming soon</div>
-    <h1>Polk County Cycling Club</h1>
-    <p>
-      Community cycling in Bolivar, MO — rides, trails, and the Frisco Highline Trail.
-      This placeholder will be replaced by the real site once design and prototype land.
-    </p>
-    <p>PoCo · Bolivar, Missouri</p>
+    <section class="hero hero-photo" aria-label="Welcome">
+      <div class="hero-photo-overlay" aria-hidden="true"></div>
+      <div class="container hero-photo-content">
+        <p class="eyebrow">Bolivar, Missouri</p>
+        <h1>Everyone’s life is improved by getting on a bike.</h1>
+        <p class="lede">PoCo Cycling is Polk County’s community bike club — weeknight spins, country-road miles, Frisco Highline adventures, and a crew that cheers you on whether you’re clipping in for the first time or chasing century dreams.</p>
+        <div class="cta-row">
+          <a class="btn" href="contact.html">Come ride with us</a>
+          <a class="btn btn-outline" href="routes.html">Explore routes</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section photo-strip-section" aria-label="Club photos">
+      <div class="container">
+        <div class="photo-strip photo-strip-3">
+          <figure class="photo-frame">
+            <img src="assets/photos/group-prep-parking-lot.jpg" alt="Cyclists gathering and preparing bikes in a parking lot before a community ride" width="800" height="600" loading="lazy">
+          </figure>
+          <figure class="photo-frame">
+            <img src="assets/photos/women-riders-dusk-selfie.jpg" alt="Four women cyclists in high-visibility gear smiling for a dusk selfie with bike lights on" width="800" height="1000" loading="lazy">
+          </figure>
+          <figure class="photo-frame">
+            <img src="assets/photos/young-rider-mtb-parking-lot.jpg" alt="Smiling young mountain bike rider in an orange safety vest and yellow helmet" width="800" height="1000" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="illust-divider" aria-hidden="true">
+      <img src="assets/illustrations/botanical.png" alt="" width="220" height="140" loading="lazy">
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="callout">
+          <div>
+            <h2>Country roads. Big hearts.</h2>
+            <p>The Country Miler is our annual gran fondo on Polk County country roads — not a rail-trail ride. Proceeds support Alpha House Pregnancy Resource Center. 60-mile and 23-mile routes, three SAG stops, tacos at the finish.</p>
+            <div class="cta-row" style="margin-top:1rem">
+              <a class="btn btn-outline" href="country-miler.html">Event info</a>
+              <a class="btn btn-barn" href="https://www.bikereg.com/the-country-miler" target="_blank" rel="noopener noreferrer">Sign up on BikeReg</a>
+            </div>
+          </div>
+          <div class="callout-stat">
+            <strong>60 / 23</strong>
+            <span>Mile route options · First Baptist Church Bolivar start</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="partner-band" aria-label="City of Bolivar partner">
+      <div class="container partner-band-inner">
+        <a class="partner-logo-link" href="https://www.bolivar.mo.us/parks-recreation" target="_blank" rel="noopener noreferrer">
+          <img class="partner-logo" src="assets/partners/city-of-bolivar-logo.png" alt="City of Bolivar" width="160" height="80" loading="lazy">
+        </a>
+        <div class="partner-band-copy">
+          <p class="eyebrow">Partner</p>
+          <p>PoCo Cycling partners with the <strong>City of Bolivar</strong> to promote cycling for our community — trails, parks, and bike-friendly miles around town.</p>
+          <p><a href="https://www.bolivar.mo.us/parks-recreation" target="_blank" rel="noopener noreferrer">City of Bolivar Parks &amp; Recreation →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Latest from the club</h2>
+            <p>Rides, trail days, and event updates.</p>
+          </div>
+          <a class="link-more" href="news.html">All news →</a>
+        </div>
+        <div class="card-grid" id="news-teaser" aria-live="polite">
+          <p class="meta">Loading news…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-wash">
+      <div class="container card-grid">
+        <article class="card">
+          <span class="tag">Mission</span>
+          <h3>Bring cyclists together</h3>
+          <p>We’re a small nonprofit building something bigger — rides, friendships, and a culture where showing up matters more than speed.</p>
+          <a href="about.html">About PoCo →</a>
+        </article>
+        <article class="card">
+          <span class="tag">City partners</span>
+          <h3>Infrastructure &amp; tourism</h3>
+          <p>We work with Bolivar to promote bike-friendly streets and trail tourism that puts Polk County on the map for riders.</p>
+          <a href="about.html#partnership">Our vision →</a>
+        </article>
+        <article class="card">
+          <span class="tag">New here?</span>
+          <h3>Come ride with us</h3>
+          <p>Meetings are TBD as we grow. Drop us a note — we’ll get you on the list for the next social ride.</p>
+          <a href="contact.html">Contact / Join →</a>
+        </article>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-mark" src="assets/poco-logo-white.png" alt="">
+          <p>Polk County Cycling Club · Bolivar, MO<br>President: Kyndle Katzer</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="routes.html">Routes</a></li>
+            <li><a href="country-miler.html">Country Miler</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="contact.html">Join / Contact</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61550557324819" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+            <li><a class="footer-admin" href="admin.html">Club admin</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PoCo Cycling · Polk County Cycling Club</span>
+        <span>Bolivar, Missouri</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js?v=logo4"></script>
 </body>
 </html>
