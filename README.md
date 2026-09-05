@@ -26,7 +26,7 @@ Optional: open any `.html` file directly for layout review; news sections will s
 | `news.html` | Full news list from JSON |
 | `routes.html` | Frisco Highline context, two real Strava routes with Leaflet+OSM+GPX embeds, community routes + submit form |
 | `country-miler.html` | Gran fondo event page (earthy accents) |
-| `contact.html` | Join / signup form (client-side + localStorage) |
+| `contact.html` | Contact page (membership signup paused) |
 | `admin.html` | Prototype route moderation (not in main nav; footer “Club admin”) |
 
 ## Brand & assets
