@@ -469,10 +469,17 @@ a:hover {
 .hero-photo-content {
   position: relative;
   z-index: 1;
-  padding: 5.5rem 0 3.75rem;
+  padding: 5.5rem 0.75rem 3.75rem; /* slight extra inline breath; .container owns gutters */
+  max-width: none; /* don't shrink+center — left edge must match nav logo gutter */
+  margin-inline: auto; /* same as nav .container */
+}
+
+/* keep a readable measure without shifting the left edge */
+.hero-photo-content > .eyebrow,
+.hero-photo-content > h1,
+.hero-photo-content > .lede,
+.hero-photo-content > .cta-row {
   max-width: 40rem;
-  margin-left: 0;
-  margin-right: auto;
 }
 
 .hero-photo .eyebrow {
