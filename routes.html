@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Routes — PoCo Cycling</title>
+  <meta name="description" content="Frisco Highline Trail and real Strava routes around Bolivar, MO — PoCo Cycling.">
+  <link rel="stylesheet" href="css/styles.css?v=inner1">
+  <link rel="icon" href="assets/poco-logo.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body class="page-routes">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="PoCo Cycling home">
+        <img class="brand-mark" src="assets/poco-logo-transparent.png" alt="PoCo Cycling">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="routes.html" aria-current="page">Routes</a></li>
+          <li><a href="country-miler.html">Country Miler</a></li>
+          <li><a class="nav-cta" href="contact.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero-split">
+      <div class="container page-hero-grid">
+        <div class="page-hero-copy">
+          <p class="eyebrow">Where we ride</p>
+          <h1>Routes</h1>
+          <p class="lede">The Frisco Highline is our signature trail. Featured routes below include free embedded maps (OpenStreetMap) from club GPX files, plus Strava links. Submit your own for club review.</p>
+        </div>
+        <aside class="page-hero-aside" aria-label="Club ride photo">
+          <figure class="hero-aside-card">
+            <img src="assets/photos/women-riders-dusk-selfie.jpg" alt="Women cyclists smiling before a dusk club ride" width="640" height="800" loading="eager">
+          </figure>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="route-featured route-featured-highline" id="frisco-highline">
+          <img class="route-featured-mark" src="assets/partners/frisco-highline-logo.png" alt="Frisco Highline Trail" width="72" height="72" loading="lazy">
+          <span class="badge badge-trail">Featured trail</span>
+          <h3>Frisco Highline Trail</h3>
+          <p>Rail trail connecting <strong>Bolivar → Springfield, MO</strong>. Smooth grades, prairie views, and the heart of PoCo culture. Ideal for road bikes with wider tires, hybrids, and gravel setups.</p>
+          <div class="route-meta">
+            <span><strong>Type:</strong> Rail trail</span>
+            <span><strong>Difficulty:</strong> Easy–moderate</span>
+            <span><strong>Surface:</strong> Crushed limestone / paved sections (varies)</span>
+          </div>
+          <p>We heavily promote the Highline for club rides, tourism, and trail stewardship days. Pack water, respect trail etiquette, and say hi to fellow riders. For a mapped end-to-end option, see the Strava route <em>Frisco to Springfield</em> below.</p>
+          <p class="route-featured-actions">
+            <a class="btn" href="https://ozarkgreenways.org/wp-content/uploads/2026/04/frisco-highline-trail-detail-map_23_1.pdf" target="_blank" rel="noopener noreferrer">Open Frisco trail map</a>
+          </p>
+        </article>
+
+        <aside class="partner-callout partner-callout-routes" aria-label="City parks and trailheads">
+          <a class="partner-logo-link" href="https://www.bolivar.mo.us/parks-recreation" target="_blank" rel="noopener noreferrer">
+            <img class="partner-logo" src="assets/partners/city-of-bolivar-logo.png" alt="City of Bolivar" width="140" height="70" loading="lazy">
+          </a>
+          <div>
+            <p class="eyebrow">Partner · Trailheads &amp; parks</p>
+            <p>Looking for city trailheads, parks, and recreation info? PoCo partners with Bolivar to promote cycling around town. The Bolivar trailhead is at <strong>800 W. Jackson Street</strong> (pavilion, picnic tables, restrooms).</p>
+            <p>
+              <a href="https://www.bolivar.mo.us/parks-recreation/park/frisco-highline-trailhead" target="_blank" rel="noopener noreferrer">Frisco Highline Trailhead →</a>
+              ·
+              <a href="https://www.bolivar.mo.us/parksites" target="_blank" rel="noopener noreferrer">Park directory →</a>
+              ·
+              <a href="https://www.bolivar.mo.us/parks-recreation" target="_blank" rel="noopener noreferrer">Parks &amp; Recreation →</a>
+            </p>
+          </div>
+        </aside>
+
+        <div class="section-head">
+          <div class="section-head-with-illust">
+            <img class="illust-icon" src="assets/illustrations/map-pin.png" alt="" width="56" height="56" loading="lazy" aria-hidden="true">
+            <div>
+              <h2>Featured routes</h2>
+              <p>Club GPX tracks on free OpenStreetMap maps. Strava links still open for live stats (login may be required).</p>
+            </div>
+          </div>
+          <a class="link-more" href="#submit-route">Submit a route →</a>
+        </div>
+
+        <div class="route-map-grid" id="featured-strava">
+          <article class="card route-card">
+            <span class="tag tag-trail">GPX map</span>
+            <h3>Frisco to Springfield</h3>
+            <p>Mapped Highline corridor from Frisco country into Springfield — the club’s go-to rail-trail adventure.</p>
+            <div class="route-map" id="map-frisco" data-gpx="assets/routes/frisco-to-springfield.gpx" data-color="#2f6b4a" role="img" aria-label="Map of Frisco to Springfield route"></div>
+            <p class="meta"><strong>File:</strong> <code>frisco-to-springfield.gpx</code> · Rail trail</p>
+            <div class="route-actions">
+              <a class="btn btn-outline" href="https://www.strava.com/routes/3335811973838770020" target="_blank" rel="noopener noreferrer">Open in Strava</a>
+              <a class="btn btn-outline" href="assets/routes/frisco-to-springfield.gpx" download>Download GPX</a>
+            </div>
+          </article>
+          <article class="card route-card">
+            <span class="tag">GPX map</span>
+            <h3>Bolivar, MO - 100k Country Days Ride (Official)</h3>
+            <p>Official Country Days 100k route out of Bolivar — country roads and event-day energy.</p>
+            <div class="route-map" id="map-country-days" data-gpx="assets/routes/country-days-100k.gpx" data-color="#8b2e2e" role="img" aria-label="Map of Bolivar 100k Country Days Ride"></div>
+            <p class="meta"><strong>File:</strong> <code>country-days-100k.gpx</code> · ~100k event route</p>
+            <div class="route-actions">
+              <a class="btn btn-outline" href="https://www.strava.com/routes/3203046025833049414" target="_blank" rel="noopener noreferrer">Open in Strava</a>
+              <a class="btn btn-outline" href="assets/routes/country-days-100k.gpx" download>Download GPX</a>
+            </div>
+          </article>
+          <article class="card card-soon">
+            <span class="tag">Coming soon</span>
+            <h3>Your route here</h3>
+            <p>Know a great Polk County loop? Submit a Strava or GPX link and club admins will review before it appears on this page.</p>
+            <p class="meta">Distance TBD · Elevation TBD</p>
+            <a class="btn" href="#submit-route">Submit yours</a>
+          </article>
+        </div>
+
+        <div class="section-head" style="margin-top: 2.5rem;">
+          <div>
+            <h2>Community routes</h2>
+            <p>Approved member submissions (stored in this browser until a real backend is wired).</p>
+          </div>
+        </div>
+        <div class="card-grid" id="published-routes" hidden aria-live="polite"></div>
+
+        <div class="note-box">
+          <strong>Note:</strong> Embedded maps use Leaflet + OpenStreetMap (no paid API keys). Strava may hide exact stats until you sign in. Treat community listings as club-approved drafts — always check the linked map before relying on them for pace or navigation.
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="submit-route">
+      <div class="container two-col">
+        <div>
+          <h2 class="form-section-title">Submit a route</h2>
+          <p class="form-lede">Share a Strava route or GPX URL. Submissions stay <strong>pending</strong> until a club admin approves them for the Routes page.</p>
+          <div id="route-submit-success" class="form-success" tabindex="-1" role="status">
+            Thanks — your route was saved as <strong>pending</strong>. Club admins review submissions before they appear on Routes. We’ll be in touch if we need more detail.
+          </div>
+          <form class="form" id="route-submit-form" action="#" method="post" novalidate>
+            <label>
+              Route title
+              <input type="text" name="title" required placeholder="e.g. South County Gravel Loop">
+            </label>
+            <label>
+              Description
+              <textarea name="description" rows="4" required placeholder="Surface, start point, who it’s good for…"></textarea>
+            </label>
+            <label>
+              Distance <span class="optional">(optional)</span>
+              <input type="text" name="distance" placeholder="e.g. 32 mi or 50 km">
+            </label>
+            <label>
+              Strava / GPX URL
+              <input type="url" name="url" required placeholder="https://www.strava.com/routes/…">
+            </label>
+            <label>
+              Your name
+              <input type="text" name="submitterName" autocomplete="name" required placeholder="Name">
+            </label>
+            <label>
+              Your email
+              <input type="email" name="submitterEmail" autocomplete="email" required placeholder="you@example.com">
+            </label>
+            <p class="form-note">Prototype only — data stays in this browser’s localStorage. Production needs a form backend and shared admin store.</p>
+            <button class="btn" type="submit">Submit for review</button>
+          </form>
+        </div>
+        <aside class="aside-card">
+          <h3>What happens next?</h3>
+          <ul>
+            <li>Your submission is marked pending</li>
+            <li>Admins review title, link, and safety</li>
+            <li>Approved routes show under Community routes</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-mark" src="assets/poco-logo-white.png" alt="">
+          <p>Polk County Cycling Club · Bolivar, MO<br>President: Kyndle Katzer</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="routes.html">Routes</a></li>
+            <li><a href="country-miler.html">Country Miler</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="contact.html">Join / Contact</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61550557324819" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+            <li><a class="footer-admin" href="admin.html">Club admin</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PoCo Cycling · Polk County Cycling Club</span>
+        <span>Bolivar, Missouri</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/maps.js"></script>
+  <script src="js/routes-store.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

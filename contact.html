@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact / Join — PoCo Cycling</title>
+  <meta name="description" content="Join PoCo Cycling or send a message. Meetings TBD. Bolivar, MO.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/poco-logo.png" type="image/png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="PoCo Cycling home">
+        <img class="brand-mark" src="assets/poco-logo-transparent.png" alt="PoCo Cycling">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="routes.html">Routes</a></li>
+          <li><a href="country-miler.html">Country Miler</a></li>
+          <li><a class="nav-cta" href="contact.html" aria-current="page">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Get involved</p>
+        <h1>Join PoCo Cycling</h1>
+        <p class="lede">Ready to ride with us? Sign up below and we’ll be in touch. Club meetings are TBD while we grow; social rides and Facebook updates keep everyone in the loop.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <div id="form-success" class="form-success" tabindex="-1" role="status">
+            <strong>Thanks for signing up!</strong> We’ll be in touch soon. Glad you’re joining the ride.
+          </div>
+          <form class="form" id="join-form" action="#" method="post" novalidate>
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required placeholder="Your name">
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required placeholder="you@example.com">
+            </label>
+            <label>
+              City / town
+              <input type="text" name="city" autocomplete="address-level2" required placeholder="Bolivar, MO">
+            </label>
+            <label>
+              Experience level <span class="optional">(optional)</span>
+              <select name="experience">
+                <option value="">Prefer not to say</option>
+                <option value="new">New to cycling / getting started</option>
+                <option value="casual">Casual / recreational</option>
+                <option value="regular">Regular club / group rides</option>
+                <option value="endurance">Endurance / racing focus</option>
+              </select>
+            </label>
+            <label>
+              How did you hear about us?
+              <select name="hearAbout" required>
+                <option value="" disabled selected>Select one…</option>
+                <option value="facebook">Facebook</option>
+                <option value="friend">Friend / word of mouth</option>
+                <option value="highline">Frisco Highline / trail</option>
+                <option value="country-miler">Country Miler</option>
+                <option value="event">Local event / Country Days</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="hearRides" checked>
+              <span>Yes — email me about upcoming rides and club news</span>
+            </label>
+            <p class="form-note">We’ll use your info to welcome you to the club and share ride updates. No spam — just PoCo.</p>
+            <button class="btn" type="submit">Join the club</button>
+          </form>
+        </div>
+        <aside class="aside-card">
+          <h3>Club contacts</h3>
+          <p><strong>Email:</strong> <a href="mailto:hello@pococycling.example">hello@pococycling.example</a><br><span class="sample-note">Placeholder address — replace with real inbox</span></p>
+          <p><strong>Facebook:</strong><br>
+            <a href="https://www.facebook.com/profile.php?id=61550557324819" rel="noopener noreferrer" target="_blank">PoCo Cycling on Facebook</a>
+          </p>
+          <p><strong>Meetings:</strong><br>TBD — schedule announced as the club grows.</p>
+          <p><strong>President:</strong><br>Kyndle Katzer</p>
+          <p><strong>Home base:</strong><br>Bolivar, Missouri</p>
+          <p><strong>Got a route?</strong><br><a href="routes.html#submit-route">Submit it on Routes</a> for admin review.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-mark" src="assets/poco-logo-white.png" alt="">
+          <p>Polk County Cycling Club · Bolivar, MO<br>President: Kyndle Katzer</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="routes.html">Routes</a></li>
+            <li><a href="country-miler.html">Country Miler</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="contact.html">Join / Contact</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61550557324819" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+            <li><a class="footer-admin" href="admin.html">Club admin</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PoCo Cycling · Polk County Cycling Club</span>
+        <span>Bolivar, Missouri</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
