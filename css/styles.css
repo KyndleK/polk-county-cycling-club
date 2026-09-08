@@ -2248,3 +2248,19 @@ body.page-home.is-scrolled .nav-toggle {
 body.lightbox-open {
   overflow: hidden;
 }
+
+
+/* Country Miler route Strava / GPX actions */
+.cm-route-list > li {
+  margin-bottom: 1.1rem;
+}
+.cm-route-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.55rem;
+}
+.cm-route-actions .btn {
+  font-size: 0.9rem;
+  padding: 0.45rem 0.85rem;
+}
