@@ -1678,18 +1678,6 @@ a:hover {
 }
 
 /* Illustration accents — light, warm, spare */
-.illust-divider {
-  display: flex;
-  justify-content: center;
-  padding: 0.25rem 0 0.5rem;
-}
-
-.illust-divider img {
-  width: min(200px, 42vw);
-  height: auto;
-  opacity: 0.92;
-}
-
 .illust-accent {
   margin: 0 0 1.25rem;
 }
@@ -2263,4 +2251,40 @@ body.lightbox-open {
 .cm-route-actions .btn {
   font-size: 0.9rem;
   padding: 0.45rem 0.85rem;
+}
+
+/* Country Miler 2027 save-the-date band */
+.cm-2027-band {
+  background: var(--cm-bg);
+  border-block: 1px solid var(--tan);
+}
+.cm-2027-card {
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.cm-2027-card .eyebrow {
+  color: var(--barn);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.cm-2027-card h2 {
+  color: var(--barn);
+  margin-bottom: 0.5rem;
+}
+.cm-2027-date {
+  font-weight: 600;
+  color: var(--ink, #2a2118);
+  margin-bottom: 0.75rem;
+}
+
+
+/* CM thank-you hero: breathe between lede and CTAs (~1.25rem more air than default) */
+.cm-hero-photo .cta-row,
+.cm-hero-photo-content .cta-row {
+  margin-top: 1.85rem;
 }
