@@ -3,7 +3,9 @@
 (function (global) {
   var STORAGE_KEY = "pocoRoutesV1";
   var AUTH_KEY = "pocoAdminAuth";
-  var ADMIN_PASSWORD = "poco";
+  // Admin sign-in is disabled until real server-side auth (e.g. Cloudflare Access) exists.
+  // Never put a password in client-side code: anyone can read it.
+  var ADMIN_PASSWORD = "";
 
   function uid() {
     return "r_" + Date.now().toString(36) + "_" + Math.random().toString(36).slice(2, 8);
@@ -86,7 +88,7 @@
   }
 
   function tryLogin(password) {
-    if (String(password) === ADMIN_PASSWORD) {
+    if (ADMIN_PASSWORD && String(password) === ADMIN_PASSWORD) {
       try {
         sessionStorage.setItem(AUTH_KEY, "1");
       } catch (_) {}
@@ -275,6 +277,5 @@
   global.PoCoRoutes = {
     initRoutesPage: initRoutesPage,
     initAdminPage: initAdminPage,
-    ADMIN_PASSWORD: ADMIN_PASSWORD,
   };
 })(window);

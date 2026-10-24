@@ -75,7 +75,7 @@ Fields: name, email, city/town, experience level (optional), how did you hear, c
 
 1. Public form on `routes.html#submit-route` — title, description, optional distance, Strava/GPX URL, submitter name + email.
 2. On submit, entry is stored in `localStorage` (`pocoRoutesV1`) with status `pending`.
-3. `admin.html` — password gate; prototype password is **`poco`** (sessionStorage auth; not real security).
+3. `admin.html` — password gate, currently disabled (no password is shipped in client code; needs real auth such as Cloudflare Access before use)
 4. Admin can **Approve** (status → `published`, shown under Community routes on Routes) or **Reject** (removed from the queue).
 
 Data is **per browser / device** only. Production needs a shared database and real authentication.
@@ -103,7 +103,7 @@ Data is **per browser / device** only. Production needs a shared database and re
 | Country Miler signup | Live: https://www.bikereg.com/the-country-miler (opens new tab) |
 | Meeting schedule | TBD on About & Contact |
 | Exact event date / fees | Not on flyer facts used here — add when set |
-| Admin password / auth | Hardcoded `poco` — replace before any public deploy |
+| Admin password / auth | Disabled; add server-side auth (e.g. Cloudflare Access) before enabling |
 
 ## Editing tips (non-dev friendly)
 
